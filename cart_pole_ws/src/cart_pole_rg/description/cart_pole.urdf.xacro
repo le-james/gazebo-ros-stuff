@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="cart_pole">
+
+    <xacro:include filename="cart_pole_core.xacro"/>
+    <!-- <xacro:include filename="cart_pole_github.xacro"/> -->
+
+    <xacro:include filename="ros2_gazebo_plugins.xacro"/>
+
+</robot>

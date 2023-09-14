@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- link colours -->
+    <material name="white">
+        <color rgba="1 1 1 1"/>
+    </material> 
+
+    <material name="orange">
+        <color rgba="1 0.3 0.1 1"/>
+    </material>     
+    
+    <material name="blue">
+        <color rgba="0.2 0.2 1 1"/>
+    </material>     
+    
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>    
+
+
+
+    <xacro:include filename="inertial_macros.xacro" />
+
+
+
+    <!-- by convention, the first link for a mobile robot in ros should be named base_link -->
+    <link name="world"></link>
+
+    <!-- attaches the chassis to the base link (body frame) -->
+    <joint name="bar_joint" type="fixed">
+        <parent link="world"/>
+        <child link="slider_bar"/>
+        <origin xyz="0 0 2"/> 
+    </joint>
+
+    <!-- bar -->
+    <link name="slider_bar">
+        <visual>
+            <!-- <origin xyz="0 0 0"/>     -->
+            <geometry>
+                <box size="5 0.05 0.05"/>  
+            </geometry>
+            <material name="white"/>
+        </visual>
+
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="10" iyz="0" izz="0"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="slider_bar">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <!-- attaches the cart to the bar link -->
+    <joint name="cart_joint" type="prismatic">
+        <parent link="slider_bar"/>
+        <child link="cart"/>
+        <origin xyz="0 0 0.075"/>    
+        <limit effort="500" velocity="1.0" lower="-2.5" upper="2.5" />
+    </joint>
+
+    <!-- cart that slides along the bar -->
+    <link name="cart">
+        <visual>
+            <origin xyz="0 0 0"/>    
+            <geometry>
+                <box size="0.1 0.1 0.1"/>  
+            </geometry>
+            <material name="orange"/>
+        </visual>
+
+        <inertial>
+            <mass value="1"/>
+            <inertia ixx="0" iyy="0" izz="0" ixy="0" ixz="0" iyz="0"/>
+        </inertial>
+    </link>
+
+    <gazebo reference="cart">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+
+    <!-- attaches the pendulum pole to the cart -->
+    <joint name="pole_joint" type="continuous">
+        <parent link="cart"/>
+        <child link="pole"/>
+        <axis xyz="0 1 0"/>
+        <origin xyz="0 -0.075 0"/>   
+        <dynamics damping="0.001" friction="0.001" />
+    </joint>
+
+    <!-- pendulum pole -->
+    <link name="pole">
+        <visual>
+            <origin xyz="0 0 -0.5"/>    
+            <geometry>
+                <box size="0.05 0.05 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+
+        <xacro:inertial_box mass="1" x="0.05" y="0.05" z="1">
+            <origin xyz="0 0 -0.5"/>
+        </xacro:inertial_box>
+    </link>
+
+    <gazebo reference="pole">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+</robot>

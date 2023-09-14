@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<!-- ros gazebo plugins -->
+
+    <!-- rate to publish to /joint_states topic -->
+    <gazebo>
+        <plugin name="gazebo_ros_joint_state_publisher"
+            filename="libgazebo_ros_joint_state_publisher.so">
+            <update_rate>100</update_rate>
+            <joint_name>cart_joint</joint_name>
+            <joint_name>pole_joint</joint_name>
+        </plugin>
+    </gazebo>
+
+    <!-- This plugin will read a JointTrajectory message from the /set_joint_trajectory topic  -->
+    <!-- move cart to a position along the x axis -->
+    <!-- ros2 topic pub -1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory '{header: {frame_id: world}, joint_names: [cart_joint], points: [{positions: {1.5}}] }' -->
+    <!-- ros2 topic pub - -rate 1 /set_joint_trajectory trajectory_msgs/msg/JointTrajectory '{header: {frame_id: world}, joint_names: [cart_joint], points: [{positions: {1.5}}] }'  -->
+    <!-- if not defined then it will update at the fastest rate -->
+    <!-- read JointTrajectory message at 2 hz? -->
+    <!-- the command above publishes to the /set_joint_trajectory topic at 1hz -->
+    <!-- <gazebo>
+        <plugin name="gazebo_ros_joint_pose_trajectory"
+            filename="libgazebo_ros_joint_pose_trajectory.so">
+            <update_rate>2</update_rate>
+        </plugin>
+    </gazebo> -->
+
+</robot>
+
+
+
+<!-- ros 2 control and gazebo plugin -->
+
+    <!-- hardware interface for the controller manager -->
+    <!-- <ros2_control name="GazeboSystem" type="system">
+        <hardware>
+            <plugin>gazebo_ros2_control/GazeboSystem</plugin>
+        </hardware>
+        <joint name="cart_joint">
+                <command_interface name="position">
+                <param name="min">-2.5</param>
+                <param name="max">2.5</param>
+            </command_interface>
+            <command_interface name="effort">
+                <param name="min">-500</param>
+                <param name="max">500</param>
+            </command_interface>
+            <state_interface name="position"/>
+            <state_interface name="velocity"/>
+            <state_interface name="effort"/>
+        </joint>
+    </ros2_control>
+
+    // gazebo plugin that tells it to use ros2_control
+    // contains its own controller manager - need to create our own if doing on real hardware
+    // 
+    <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <parameters>$(find cart_pole_rg)/config/controller_configuration.yaml</parameters>
+        </plugin>
+    </gazebo>
+
+</robot> -->

@@ -1,0 +1,64 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <world name='myWRLD'>
+    
+    <include>
+        <uri>model://ground_plane</uri>
+    </include>
+
+    <include>
+        <uri>model://sun</uri>
+    </include>
+
+    <!-- <include>
+        <uri>model://cylinder</uri>
+    </include> -->
+
+    <!-- add a simple arm into the world -->
+    <!-- <plugin name="basic_world_plugin" filename="libbasic_world_plugin.so"/> -->
+
+    <model name="box">
+
+        <pose>5 0 5 0 0 0</pose>
+
+        <link name="box">
+            <collision name="collision">
+                <geometry>
+                    <cylinder>
+                        <radius>0.2</radius>
+                        <length>10</length>
+                    </cylinder>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                <cylinder>
+                    <radius>0.2</radius>
+                    <length>10</length>
+                </cylinder>
+                </geometry>
+            </visual>
+          <!-- <gravity>9.81</gravity> -->
+        </link>
+
+        <!-- output the data on world_stats topic -->
+        <!-- <plugin name="basic_sub_plugin" filename="libbasic_sub_plugin.so"/> -->
+
+        <!-- <plugin name="libbasic_model_plugin" filename="libbasic_model_plugin.so"> -->
+            <!-- <model_vel>0.1</model_vel> -->
+        <!-- </plugin> -->
+
+        <plugin name="libbasic_model_plugin_ros" filename="libbasic_model_plugin_ros.so">
+            <model_vel>0.3</model_vel>
+            <test name="testName"/>
+        </plugin>
+
+        <plugin name="gazebo_ros_6dof_joint_state_publisher"
+            filename="libgazebo_ros_6dof_joint_state_publisher.so">
+        </plugin>
+
+      </model>
+
+  </world>
+</sdf>
