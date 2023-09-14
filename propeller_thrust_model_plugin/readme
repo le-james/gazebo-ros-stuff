@@ -1,0 +1,11 @@
+Created: Apr 6, 2023
+Last update: Apr 6 2023
+
+IMPORTANT: Need to export the path to this plugin using the command below
+	< export GAZEBO_PLUGIN_PATH=~/Documents/my_gazebo_plugins/propeller_thrust_model_plugin/build:$GAZEBO_PLUGIN_PATH >
+
+This is a propeller thrust model plugin
+    Models the thrust produced by a propeller based on experimental data from https://database.tytorobotics.com/propellers
+    
+    The thrust is applied to the link (propeller)
+    

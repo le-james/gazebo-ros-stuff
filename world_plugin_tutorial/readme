@@ -1,0 +1,8 @@
+Created: Mar 5, 2023
+Last update: Mar 5 2023
+
+This is my first plugin for Gazebo
+
+It uses a "nested" CMakeList.txt (i.e. the plugin code is in the world_plugins folder with another CMakeLists.txt)
+
+The .so file in the /build/world_plugins

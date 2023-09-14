@@ -1,0 +1,2 @@
+add_library(basic_world_plugin SHARED basic_world_plugin.cc)
+target_link_libraries(basic_world_plugin ${GAZEBO_LIBRARIES})

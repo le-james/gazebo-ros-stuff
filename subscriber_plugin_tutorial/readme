@@ -1,0 +1,11 @@
+Created: Mar 14, 2023
+Last update: Mar 14 2023
+
+This is a subscriber model plugin
+    i.e. The plugin is in between the model tags in the sdf
+    All pointers point to tags within the model tags
+
+
+
+
+
