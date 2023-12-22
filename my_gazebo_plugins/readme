@@ -1,0 +1,16 @@
+All my custom plugins
+
+Each plugin are created in their respective folders in the my_gazebo_plugins folder
+
+Need to export the path to the models and plugins folders using the commands below:
+	export GAZEBO_MODEL_PATH=~/.gazebo/models:$GAZEBO_MODEL_PATH
+	export GAZEBO_PLUGIN_PATH=~/Documents/my_gazebo_plugins/plugins/:$GAZEBO_PLUGIN_PATH
+	
+For testing purposes so I don't have to keep moving the .so file to the /plugins folder
+	export GAZEBO_PLUGIN_PATH=~/Documents/my_gazebo_plugins/<TEST_PLUGIN_FOLDER>/build/:$GAZEBO_PLUGIN_PATH
+
+To see the exported paths use the command: 
+	printenv
+	
+To delete an exported path use the command:
+	unset <export path name>

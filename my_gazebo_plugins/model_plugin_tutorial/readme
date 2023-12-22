@@ -1,0 +1,7 @@
+Created: Mar 19, 2023
+Last update: Mar 19 2023
+
+This is a model plugin
+    i.e. The plugin is inbetween the model tags in the sdf
+    All pointers point to tags within the model tags
+    

@@ -1,0 +1,8 @@
+Created: Mar 23, 2023
+Last update: Mar 25 2023
+
+This is a model plugin that is subscribed to a ros topic
+    i.e. The plugin is inbetween the model tags in the sdf
+    All pointers point to tags within the model tags
+    
+package.xml is needed to connect Gazebo and ROS
