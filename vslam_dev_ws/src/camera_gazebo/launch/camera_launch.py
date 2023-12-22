@@ -8,6 +8,7 @@ from launch.actions import LogInfo, RegisterEventHandler, TimerAction
 from launch.event_handlers import OnProcessStart
 
 from launch_ros.actions import Node
+
 import xacro
 
 def generate_launch_description():
@@ -65,7 +66,7 @@ def generate_launch_description():
 
     link_broadcaster = Node(package='camera_gazebo',
                             executable='link_broadcaster',
-                            name='link_broadcaster_1')
+                            name='my_link_broadcaster')
 
     return LaunchDescription([
 
@@ -93,7 +94,7 @@ def generate_launch_description():
         node_robot_state_publisher,
         spawn_entity,
         static_world_link,
-        # link_broadcaster,
+        link_broadcaster,
 
         TimerAction(period=4.0,
             actions=[rviz2]),

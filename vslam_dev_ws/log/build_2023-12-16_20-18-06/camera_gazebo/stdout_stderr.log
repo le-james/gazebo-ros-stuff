@@ -1,0 +1,58 @@
+-- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+-- Found tf2_ros: 0.25.5 (/opt/ros/humble/share/tf2_ros/cmake)
+-- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: 
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo
+[35m[1mConsolidate compiler generated dependencies of target link_broadcaster[0m
+[100%] Built target link_broadcaster
+-- Install configuration: ""
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/launch
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/launch/camera_launch.py
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/camera.urdf.xacro
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/bu.xacro
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/camera_core.xacro
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/sdsdf.cpp
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/worlds
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/worlds/basic.world
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/config
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/config/basic.rviz
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/lib/camera_gazebo/link_broadcaster
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/ament_index/resource_index/package_run_dependencies/camera_gazebo
+-- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/ament_index/resource_index/parent_prefix_path/camera_gazebo
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/ament_prefix_path.sh
+-- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/path.sh
+-- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/path.dsv
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.bash
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.sh
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.zsh
+-- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.dsv
+-- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/package.dsv
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/ament_index/resource_index/packages/camera_gazebo
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/cmake/camera_gazeboConfig.cmake
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/cmake/camera_gazeboConfig-version.cmake
+-- Up-to-date: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/package.xml

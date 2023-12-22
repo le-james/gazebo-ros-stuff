@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+	"name": "V-SLAM Dev",
+	"build": {
+		// Sets the run context to one level up instead of the .devcontainer folder.
+		"context": "..",
+		// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+		"dockerfile": "Dockerfile"
+	},
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Uncomment the next line to run commands after the container is created.
+	// From: https://docs.ros.org/en/iron/How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html
+	// Doesn't seem like you can't source ros2 using this postCreateCommand
+	// "postCreateCommand": "source /opt/ros/humble/setup.bash",
+
+	// Arguments for running an image as a container
+	"runArgs": [
+		// These two lines are for running Gazebo in a container - both pairs of lines work
+        // "--net=host",
+        // "-e DISPLAY=${env:DISPLAY}",
+		"--network=host",
+		"--env=DISPLAY",
+
+		// doesn't seem to affect anything
+		// "--memory=12g"
+
+		// share amd gpu in containers
+		"--device","/dev/kfd",
+		"--device","/dev/dri"
+    ],
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+	
+	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+	// Username have to match the one in the Dockerfile
+	"remoteUser": "user0",
+
+	// Keep bash command history persisting between container start up and stops (Every container will share this history)
+	"mounts": [
+		"source=projectname-bashhistory,target=/commandhistory,type=volume"
+	],
+	
+	// Add VSCode extensions to the container
+	// Left click an extention in the sidebar and click "Add to devcontainer.json" to add it here
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-azuretools.vscode-docker",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack",
+				"twxs.cmake",
+				"ms-vscode.cmake-tools",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"ms-iot.vscode-ros"
+			]
+		}
+	}
+} 

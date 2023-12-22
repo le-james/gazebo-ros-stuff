@@ -1,0 +1,4 @@
+Invoking command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo -- -j12 -l12
+Invoked command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo -- -j12 -l12
+Invoking command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo
+Invoked command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo

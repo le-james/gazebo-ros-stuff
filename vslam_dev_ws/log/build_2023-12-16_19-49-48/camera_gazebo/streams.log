@@ -1,0 +1,86 @@
+[0.056s] Invoking command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/gazebo-ros-stuff/vslam_dev_ws/src/camera_gazebo -DCMAKE_INSTALL_PREFIX=/workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo
+[0.132s] -- The C compiler identification is GNU 11.4.0
+[0.195s] -- The CXX compiler identification is GNU 11.4.0
+[0.203s] -- Detecting C compiler ABI info
+[0.317s] -- Detecting C compiler ABI info - done
+[0.341s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.341s] -- Detecting C compile features
+[0.342s] -- Detecting C compile features - done
+[0.351s] -- Detecting CXX compiler ABI info
+[0.489s] -- Detecting CXX compiler ABI info - done
+[0.513s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.513s] -- Detecting CXX compile features
+[0.515s] -- Detecting CXX compile features - done
+[0.526s] -- Found ament_cmake: 1.3.6 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.783s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.945s] -- Found rclcpp: 16.0.7 (/opt/ros/humble/share/rclcpp/cmake)
+[1.008s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[1.016s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[1.028s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[1.048s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.077s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.174s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.179s] -- Found rmw_fastrtps_cpp: 6.2.5 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.381s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.452s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.530s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.545s] -- Looking for pthread.h
+[1.660s] -- Looking for pthread.h - found
+[1.660s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.790s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.791s] -- Found Threads: TRUE  
+[1.998s] -- Found geometry_msgs: 4.2.3 (/opt/ros/humble/share/geometry_msgs/cmake)
+[2.053s] -- Found tf2_ros: 0.25.5 (/opt/ros/humble/share/tf2_ros/cmake)
+[2.463s] -- Found ament_lint_auto: 0.12.9 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.591s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.593s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.594s] -- Configured cppcheck include dirs: 
+[2.594s] -- Configured cppcheck exclude dirs and/or files: 
+[2.596s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.596s] -- Configured cpplint exclude dirs and/or files: 
+[2.596s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.597s] -- Added test 'lint_cmake' to check CMake code style
+[2.598s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[2.600s] -- Added test 'uncrustify' to check C / C++ code style
+[2.600s] -- Configured uncrustify additional arguments: 
+[2.601s] -- Added test 'xmllint' to check XML markup files
+[2.602s] -- Configuring done
+[2.621s] -- Generating done
+[2.623s] -- Build files have been written to: /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo
+[2.634s] Invoked command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /workspaces/gazebo-ros-stuff/vslam_dev_ws/src/camera_gazebo -DCMAKE_INSTALL_PREFIX=/workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo
+[2.636s] Invoking command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo -- -j12 -l12
+[2.709s] [ 50%] [32mBuilding CXX object CMakeFiles/link_broadcaster.dir/tf2_broadcaster/tf2_link_broadcaster.cpp.o[0m
+[11.028s] [100%] [32m[1mLinking CXX executable link_broadcaster[0m
+[11.502s] [100%] Built target link_broadcaster
+[11.534s] Invoked command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo -- -j12 -l12
+[11.609s] Invoking command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo
+[11.630s] -- Install configuration: ""
+[11.630s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/launch
+[11.630s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/launch/camera_launch.py
+[11.631s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description
+[11.631s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/camera.urdf.xacro
+[11.631s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/bu.xacro
+[11.632s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/camera_core.xacro
+[11.632s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/description/sdsdf.cpp
+[11.633s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/worlds
+[11.633s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/worlds/basic.world
+[11.633s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/config
+[11.634s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/config/basic.rviz
+[11.634s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/lib/camera_gazebo/link_broadcaster
+[11.646s] -- Set runtime path of "/workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/lib/camera_gazebo/link_broadcaster" to ""
+[11.647s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/ament_index/resource_index/package_run_dependencies/camera_gazebo
+[11.647s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/ament_index/resource_index/parent_prefix_path/camera_gazebo
+[11.647s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/ament_prefix_path.sh
+[11.648s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/ament_prefix_path.dsv
+[11.648s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/path.sh
+[11.648s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/environment/path.dsv
+[11.649s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.bash
+[11.649s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.sh
+[11.649s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.zsh
+[11.649s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/local_setup.dsv
+[11.649s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/package.dsv
+[11.650s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/ament_index/resource_index/packages/camera_gazebo
+[11.650s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/cmake/camera_gazeboConfig.cmake
+[11.650s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/cmake/camera_gazeboConfig-version.cmake
+[11.650s] -- Installing: /workspaces/gazebo-ros-stuff/vslam_dev_ws/install/camera_gazebo/share/camera_gazebo/package.xml
+[11.654s] Invoked command in '/workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo
