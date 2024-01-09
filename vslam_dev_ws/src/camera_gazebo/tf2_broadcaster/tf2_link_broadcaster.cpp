@@ -5,6 +5,9 @@
 #include "geometry_msgs/msg/pose_stamped.hpp"
 #include "geometry_msgs/msg/pose_array.hpp"
 
+// the gazebo plugin "gazebo_ros_link_pose_publisher" has this code in it
+// it is launched in the launch file
+// not sure why i did this
 
 class FramePublisher : public rclcpp::Node
 {

@@ -9,6 +9,14 @@
 		"dockerfile": "Dockerfile"
 	},
 
+	// use this when running commands from the dockerfile
+	// "overrideCommand": false,
+
+	// only include this workspace in the container (VSLAM_DEV_WS)
+	// have to use bind for this to work, volume give an error when building
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/vslam_dev_ws,type=bind",
+	"workspaceFolder": "/workspace/vslam_dev_ws",
+
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 
@@ -29,6 +37,7 @@
 		"--env=DISPLAY",
 
 		// doesn't seem to affect anything
+		// need to install amd gpu stuff for it to work in a container
 		// "--memory=12g"
 
 		// share amd gpu in containers
@@ -36,16 +45,31 @@
 		"--device","/dev/dri"
     ],
 
+	// append another model and plugin path
+	"containerEnv": {
+		"GAZEBO_MODEL_PATH": "~/.gazebo/models:$GAZEBO_MODEL_PATH",
+		// "GAZEBO_PLUGIN_PATH": "${containerWorkspaceFolder}/gazebo-ros-stuff/my_gazebo_plugins/plugins/:$GAZEBO_PLUGIN_PATH"
+		// "GAZEBO_PLUGIN_PATH": "/workspace/gazebo-ros-stuff/my_gazebo_plugins/plugins/:$GAZEBO_PLUGIN_PATH"
+		"GAZEBO_PLUGIN_PATH": "/workspace/my_gazebo_plugins/gazebo_ros_link_pose_publisher/build/:$GAZEBO_PLUGIN_PATH"
+	},
+
+	"postStartCommand": ". /entrypoint.sh",
+	// "postCreateCommand": ". /entrypoint.sh",
+
 	// Configure tool-specific properties.
 	// "customizations": {},
 	
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
 	// Username have to match the one in the Dockerfile
 	"remoteUser": "user0",
-
+	
 	// Keep bash command history persisting between container start up and stops (Every container will share this history)
 	"mounts": [
-		"source=projectname-bashhistory,target=/commandhistory,type=volume"
+		"source=projectname-bashhistory,target=/commandhistory,type=volume",
+		"source=${localEnv:HOME}/Documents/gazebo-ros-stuff/my_gazebo_plugins,target=/workspace/my_gazebo_plugins,type=bind,consistency=cached"
+		// for some reason this doesn't work - ${localEnv:HOME} is ~/ 
+		// "source=~/Documents/gazebo-ros-stuff/my_gazebo_plugins,target=/workspace/my_gazebo_plugins,type=bind,consistency=cached"
+		// "source=home/jle/Documents/gazebo-ros-stuff/my_gazebo_plugins,target=/workspace/my_gazebo_plugins,type=bind,consistency=cached"
 	],
 	
 	// Add VSCode extensions to the container

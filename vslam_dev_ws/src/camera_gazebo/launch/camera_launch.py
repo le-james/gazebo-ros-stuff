@@ -16,7 +16,9 @@ def generate_launch_description():
     # Specify the name of the package and path to xacro file within the package
     pkg_name = 'camera_gazebo'
     # file_subpath = 'description/camera.urdf.xacro'
-    file_subpath = 'description/bu.xacro'
+    file_subpath = 'description/camera_r1.urdf.xacro'
+    # file_subpath = 'description/camera.urdf.xacro'
+    # file_subpath = 'description/bu.xacro'
 
 
     # Use xacro to process the file
@@ -29,8 +31,7 @@ def generate_launch_description():
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[{'robot_description': robot_description_raw,
-        'use_sim_time': True}] # add other parameters here if required
+        parameters=[{'robot_description': robot_description_raw, 'use_sim_time': True}] # add other parameters here if required
     )
 
     # gazebo node to launch (launches gazebo)
@@ -58,15 +59,16 @@ def generate_launch_description():
                  name='rviz2', 
                  arguments=['-d',[os.path.join(get_package_share_directory(pkg_name), 'config', 'basic.rviz')]])
 
+    # from https://docs.ros.org/en/foxy/Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html
     static_world_link = Node(package='tf2_ros',
                              executable='static_transform_publisher',
                              arguments=['0', '0', '0', '0', '0', '0', 'world', 'base_link'])
                             #  arguments=['0', '0', '0', '0', '0', '0', 'world', 'slider_link'])
                             #  arguments=['0', '0', '0', '0', '0', '0', 'base_link', 'slider_link'])
 
-    link_broadcaster = Node(package='camera_gazebo',
-                            executable='link_broadcaster',
-                            name='my_link_broadcaster')
+    # link_broadcaster = Node(package='camera_gazebo',
+    #                         executable='link_broadcaster',
+    #                         name='my_link_broadcaster')
 
     return LaunchDescription([
 
@@ -94,7 +96,7 @@ def generate_launch_description():
         node_robot_state_publisher,
         spawn_entity,
         static_world_link,
-        link_broadcaster,
+        # link_broadcaster,
 
         TimerAction(period=4.0,
             actions=[rviz2]),

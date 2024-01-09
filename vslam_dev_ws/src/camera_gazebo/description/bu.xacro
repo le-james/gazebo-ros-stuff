@@ -140,18 +140,6 @@
     </link>
     
     <gazebo>
-        <!-- <plugin name="gazebo_ros_joint_state_publisher"
-            filename="libgazebo_ros_joint_state_publisher.so">
-            <update_rate>20</update_rate>
-            <joint_name>slider_joint_x</joint_name>
-            <joint_name>base_joint</joint_name>
-        </plugin> -->
-
-        <!-- model plugins must be inside the model tags to work -->
-        <!-- <plugin name="gazebo_ros_6dof_joint_state_publisher"
-            filename="libgazebo_ros_6dof_joint_state_publisher.so">
-        </plugin> -->
-
         <plugin name="gazebo_ros_link_pose_publisher"
             filename="libgazebo_ros_link_pose_publisher.so">
         </plugin>

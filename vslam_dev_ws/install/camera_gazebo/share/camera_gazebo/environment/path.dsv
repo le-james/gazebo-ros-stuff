@@ -1,1 +1,1 @@
-prepend-non-duplicate-if-exists;PATH;bin
+/workspace/vslam_dev_ws/build/camera_gazebo/ament_cmake_environment_hooks/path.dsv

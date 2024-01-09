@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /workspaces/gazebo-ros-stuff/vslam_dev_ws/src/camera_gazebo
+CMAKE_SOURCE_DIR = /workspace/vslam_dev_ws/src/camera_gazebo
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo
+CMAKE_BINARY_DIR = /workspace/vslam_dev_ws/build/camera_gazebo
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspaces/gazebo-ros-stuff/vslam_dev_ws/src/camera_gazebo /workspaces/gazebo-ros-stuff/vslam_dev_ws/src/camera_gazebo /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo /workspaces/gazebo-ros-stuff/vslam_dev_ws/build/camera_gazebo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /workspace/vslam_dev_ws/build/camera_gazebo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /workspace/vslam_dev_ws/src/camera_gazebo /workspace/vslam_dev_ws/src/camera_gazebo /workspace/vslam_dev_ws/build/camera_gazebo /workspace/vslam_dev_ws/build/camera_gazebo /workspace/vslam_dev_ws/build/camera_gazebo/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 
