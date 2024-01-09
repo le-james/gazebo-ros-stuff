@@ -1,1 +1,0 @@
-/workspace/vslam_dev_ws/src/camera_gazebo/launch/camera_launch.py
